@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAUDINOVA — Сайт, который нравится гостям</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Прелоадер (можно удалить при вставке на готовый сайт) -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__logo">
+            <span class="preloader__text">BAUDINOVA</span>
+            <div class="preloader__line"></div>
+            <div class="preloader__glow"></div>
+        </div>
+    </div>
+
+    <!-- Шапка (упрощённая, для примера) -->
+    <header class="header" id="header">
+        <div class="header__main">
+            <a href="index.html" class="header__logo">
+                BAUDINOVA
+                <span class="header__logo-line"></span>
+            </a>
+            <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                    <span class="theme-toggle__icon">☀️</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главная секция: почему сайт хороший -->
+    <section class="section site-love" id="site-love">
+        <div class="container">
+            <div class="site-love__grid reveal fade-in">
+                <div class="site-love__content">
+                    <h2 class="section__title">
+                        Сайт, который <span class="gold-text">нравится нашим гостям</span>
+                    </h2>
+                    <p class="site-love__intro">
+                        Мы создали это цифровое пространство, чтобы ваше знакомство с BAUDINOVA начиналось с эстетики и абсолютного комфорта. Здесь нет случайных элементов — каждая деталь продумана так же тщательно, как образ, который вы выбираете в салоне.
+                    </p>
+                    <ul class="site-love__list">
+                        <li class="site-love__item">
+                            <i class="fa-solid fa-compass gold-icon"></i>
+                            <div>
+                                <strong>Интуитивная навигация</strong>
+                                <p>Вы находите нужную услугу за пару касаний — меню простое, как взмах кисти стилиста.</p>
+                            </div>
+                        </li>
+                        <li class="site-love__item">
+                            <i class="fa-solid fa-palette gold-icon"></i>
+                            <div>
+                                <strong>Изысканный дизайн</strong>
+                                <p>Шоколадные оттенки, золото и воздушный кремовый фон — сайт выглядит так же дорого, как интерьер нашего салона.</p>
+                            </div>
+                        </li>
+                        <li class="site-love__item">
+                            <i class="fa-solid fa-bolt gold-icon"></i>
+                            <div>
+                                <strong>Мгновенный доступ</strong>
+                                <p>Цены, контакты, запись — всё загружается моментально, без ожидания и лишних страниц.</p>
+                            </div>
+                        </li>
+                        <li class="site-love__item">
+                            <i class="fa-solid fa-heart gold-icon"></i>
+                            <div>
+                                <strong>Забота в каждом пикселе</strong>
+                                <p>Тот же индивидуальный подход, что и в кресле мастера: анимации, тёплая типографика, плавные переходы.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="site-love__stat">
+                        <span class="site-love__percent">98%</span>
+                        <span class="site-love__desc">посетителей возвращаются снова</span>
+                    </div>
+                    <a href="page.html" class="btn btn--gold btn--ripple">Оцените удобство сами</a>
+                </div>
+                <div class="site-love__visual reveal slide-right">
+                    <div class="site-love__mockup">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=400&fit=crop" alt="Сайт BAUDINOVA на мобильном устройстве" loading="lazy">
+                        <div class="site-love__badge">
+                            <i class="fa-solid fa-star"></i> Выбор гостей
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал (упрощённый) -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p class="footer__copy">© BAUDINOVA, 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Прелоадер
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                if (preloader) {
+                    preloader.classList.add('preloader--hidden');
+                    setTimeout(() => preloader.remove(), 600);
+                }
+            }, 1200);
+        });
+
+        // Тема
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('baudinova-theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('baudinova-theme', next);
+            updateThemeIcon(next);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('.theme-toggle__icon');
+            if (icon) icon.textContent = theme === 'light' ? '☀️' : '🌙';
+        }
+
+        // Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
