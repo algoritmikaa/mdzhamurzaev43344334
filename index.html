@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и цены — BAUDINOVA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Прелоадер -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__logo">
+            <span class="preloader__text">BAUDINOVA</span>
+            <div class="preloader__line"></div>
+            <div class="preloader__glow"></div>
+        </div>
+    </div>
+
+    <!-- Шапка -->
+    <header class="header" id="header">
+        <div class="header__top">
+            <a href="tel:+79284754611" class="header__phone">
+                <i class="fa-solid fa-phone"></i> 8 (928) 475-46-11
+            </a>
+        </div>
+        <div class="header__main">
+            <a href="index.html" class="header__logo">
+                BAUDINOVA
+                <span class="header__logo-line"></span>
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">О салоне</a></li>
+                    <li class="nav__item"><a href="page.html" class="nav__link nav__link--active">Услуги</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                    <span class="theme-toggle__icon">☀️</span>
+                </button>
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero-секция -->
+    <section class="hero hero--page" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content reveal fade-in">
+            <h1 class="hero__title typing">Наши услуги</h1>
+            <p class="hero__subtitle">Детальный прайс-лист и индивидуальные предложения</p>
+        </div>
+    </section>
+
+    <!-- Аккордеон услуг -->
+    <section class="section" id="services-accordion">
+        <div class="container">
+            <div class="accordion">
+
+                <!-- Категория: Окрашивание -->
+                <div class="accordion__item active">
+                    <div class="accordion__header">
+                        <span>🎨 Окрашивание</span>
+                        <span class="accordion__icon">+</span>
+                    </div>
+                    <div class="accordion__body">
+                        <!-- 👇 Добавлено изображение -->
+                        <div class="accordion__image">
+                            <img width="150"src="https://daviani.ru/upload/degrade.jpg" alt="Окрашивание волос">
+                        </div>
+                        <table class="accordion__table">
+                            <tr><td>Окрашивание в тон</td><td>от 3 000 ₽</td></tr>
+                            <tr><td>Окрашивание корней и тонировка</td><td>3 500 ₽</td></tr>
+                            <tr><td>Тонировка</td><td>от 3 000 ₽</td></tr>
+                            <tr><td>Сложное окрашивание</td><td>8 000 – 20 000 ₽</td></tr>
+                            <tr><td>Полный блонд</td><td>10 000 – 20 000 ₽</td></tr>
+                            <tr><td>Коррекция сложного окрашивания (фасадная часть)</td><td>5 000 – 10 000 ₽</td></tr>
+                            <tr><td>Креативное (цветное) окрашивание</td><td>10 000 – 25 000 ₽</td></tr>
+                            <tr><td>Скрытое окрашивание</td><td>5 000 – 8 000 ₽</td></tr>
+                            <tr><td>Окрашивание передних прядей</td><td>3 000 – 5 000 ₽</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Категория: Стрижка и укладка -->
+                <div class="accordion__item">
+                    <div class="accordion__header">
+                        <span>✂️ Стрижка и укладка</span>
+                        <span class="accordion__icon">+</span>
+                    </div>
+                    <div class="accordion__body">
+                        <!-- 👇 Добавлено изображение -->
+                        <div class="accordion__image">
+                            <img width="150"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6gWG3xAkaDEmuCGDI3_-dT3q15fhlQYja6w&s" alt="Стрижка и укладка">
+                        </div>
+                        <table class="accordion__table">
+                            <tr><td>Стрижка</td><td>1 500 ₽</td></tr>
+                            <tr><td>Стрижка после окрашивания</td><td>1 000 ₽</td></tr>
+                            <tr><td>Чёлка</td><td>500 ₽</td></tr>
+                            <tr><td>Мытьё головы и сушка (без укладки)</td><td>500 ₽</td></tr>
+                            <tr><td>Полировка волос</td><td>от 1 500 ₽</td></tr>
+                            <tr><td>Укладка без мытья головы</td><td>1 000 ₽</td></tr>
+                            <tr><td>Укладка с мытьём головы</td><td>1 500 ₽</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Категория: Уход и лечение -->
+                <div class="accordion__item">
+                    <div class="accordion__header">
+                        <span>💆‍♀️ Уход и лечение волос</span>
+                        <span class="accordion__icon">+</span>
+                    </div>
+                    <div class="accordion__body">
+                        <!-- 👇 Добавлено изображение -->
+                        <div class="accordion__image">
+                            <img src="https://placehold.co/600x200?text=Hair+Care+Treatment" alt="Уход за волосами">
+                        </div>
+                        <table class="accordion__table">
+                            <tr><td>Уход и лечение волос</td><td>от 1 500 ₽</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Категория: Маникюр -->
+                <div class="accordion__item">
+                    <div class="accordion__header">
+                        <span>💅 Маникюр</span>
+                        <span class="accordion__icon">+</span>
+                    </div>
+                    <div class="accordion__body">
+                        <!-- 👇 Добавлено изображение -->
+                        <div class="accordion__image">
+                            <img src="https://placehold.co/600x200?text=Manicure+Service" alt="Маникюр">
+                        </div>
+                        <table class="accordion__table">
+                            <tr><td>Классический</td><td>600 ₽</td></tr>
+                            <tr><td>Комбинированный</td><td>700 ₽</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Категория: Педикюр -->
+                <div class="accordion__item">
+                    <div class="accordion__header">
+                        <span>🦶 Педикюр</span>
+                        <span class="accordion__icon">+</span>
+                    </div>
+                    <div class="accordion__body">
+                        <!-- 👇 Добавлено изображение -->
+                        <div class="accordion__image">
+                            <img src="https://placehold.co/600x200?text=Pedicure+Service" alt="Педикюр">
+                        </div>
+                        <table class="accordion__table">
+                            <tr><td>Классический</td><td>600 ₽</td></tr>
+                            <tr><td>Комбинированный</td><td>700 ₽</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div><!-- /accordion -->
+        </div>
+    </section>
+
+    <!-- Специальное предложение -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="special-offer reveal fade-in">
+                <div class="special-offer__badge">-20%</div>
+                <h2 class="special-offer__title">Специальное предложение</h2>
+                <p class="special-offer__desc">Скидка 20% на первое посещение для новых клиентов. Успейте ощутить атмосферу премиального ухода по особой цене.</p>
+                <a href="#contacts" class="btn btn--gold btn--pulse">Записаться со скидкой</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и форма (то же, что на главной) -->
+    <section class="contacts section" id="contacts">
+        <div class="container">
+            <h2 class="section__title section__title--center reveal fade-in">Свяжитесь с нами</h2>
+            <div class="contacts__grid">
+                <div class="contacts__info reveal slide-left">
+                    <div class="contacts__item">
+                        <span class="contacts__icon">✆</span>
+                        <div>
+                            <p class="contacts__label">Телефон</p>
+                            <a href="tel:+79284754611" class="contacts__value contacts__value--phone">8 (928) 475-46-11</a>
+                        </div>
+                    </div>
+                    <div class="contacts__item">
+                        <span class="contacts__icon">✉</span>
+                        <div>
+                            <p class="contacts__label">Адрес</p>
+                            <p class="contacts__value">Шейха Али Митаева, 43</p>
+                        </div>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?text=Шейха%20Али%20Митаева%2C%2043&z=15" width="100%" height="220" style="border:0;border-radius:16px;" allowfullscreen="" loading="lazy" title="Карта расположения салона"></iframe>
+                    </div>
+                </div>
+                <div class="contacts__form-wrapper reveal slide-right">
+                    <form class="contacts__form" id="bookingForm">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" class="form__input" placeholder="Ваш телефон" required>
+                        </div>
+                        <div class="form__group">
+                            <select class="form__input form__select" required>
+                                <option value="" disabled selected>Выберите услугу</option>
+                                <option value="hair">Стрижка и укладка</option>
+                                <option value="color">Окрашивание</option>
+                                <option value="nails">Маникюр и педикюр</option>
+                                <option value="cosmo">Косметология</option>
+                                <option value="makeup">Макияж</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--gold btn--full btn--ripple">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <span class="footer__logo">BAUDINOVA</span>
+                    <span class="footer__logo-line"></span>
+                </div>
+                <div class="footer__contacts">
+                    <a href="tel:+79284754611" class="footer__phone">
+                        <i class="fa-solid fa-phone footer__contact-icon"></i> 8 (928) 475-46-11
+                    </a>
+                    <p class="footer__address">
+                        <i class="fa-solid fa-location-dot footer__contact-icon"></i> Шейха Али Митаева, 43
+                    </p>
+                </div>
+                <div class="footer__actions">
+                    <a href="#contacts" class="btn btn--gold btn--pulse">Записаться</a>
+                </div>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="footer__social" aria-label="Telegram"><i class="fa-brands fa-telegram-plane"></i></a>
+                    <a href="#" class="footer__social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <p class="footer__copy">© BAUDINOVA, 2026</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="successModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <span class="modal__close" id="modalClose">&times;</span>
+            <div class="modal__icon">✨</div>
+            <h3 class="modal__title">Спасибо за заявку!</h3>
+            <p class="modal__text">Мы свяжемся с вами в ближайшее время, чтобы подтвердить запись.</p>
+            <button class="btn btn--gold modal__btn" id="modalOk">Хорошо</button>
+        </div>
+    </div>
+
+    <!-- Фиксированная кнопка записи (мобильные) -->
+    <a href="#contacts" class="btn btn--gold booking-fixed">Записаться</a>
+
+    <script>
+        // Прелоадер
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                if (preloader) {
+                    preloader.classList.add('preloader--hidden');
+                    setTimeout(() => preloader.remove(), 600);
+                }
+            }, 1500);
+        });
+
+        // Тема
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('baudinova-theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('baudinova-theme', next);
+            updateThemeIcon(next);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('.theme-toggle__icon');
+            if (icon) icon.textContent = theme === 'light' ? '☀️' : '🌙';
+        }
+
+        // Бургер
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('burger--active');
+            nav.classList.toggle('nav--open');
+        });
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('burger--active');
+                nav.classList.remove('nav--open');
+            });
+        });
+
+        // Аккордеон
+        document.querySelectorAll('.accordion__header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+                // Закрываем все вложенные аккордеоны (если нужно оставить независимыми — убрать цикл)
+                document.querySelectorAll('.accordion__item').forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(el => observer.observe(el));
+
+        // Модальное окно
+        const modal = document.getElementById('successModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalOk = document.getElementById('modalOk');
+        const bookingForm = document.getElementById('bookingForm');
+
+        function openModal() {
+            modal.classList.add('modal--active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            modal.classList.remove('modal--active');
+            document.body.style.overflow = '';
+        }
+        modalClose.addEventListener('click', closeModal);
+        modalOk.addEventListener('click', closeModal);
+        modal.querySelector('.modal__overlay').addEventListener('click', closeModal);
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            openModal();
+            bookingForm.reset();
+        });
+
+        // Активная ссылка
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.classList.remove('nav__link--active');
+            const href = link.getAttribute('href');
+            if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                link.classList.add('nav__link--active');
+            }
+        });
+    </script>
+</body>
+</html>
